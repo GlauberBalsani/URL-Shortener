@@ -33,7 +33,7 @@ public class UrlServices {
         Url urlSave = repository.save(url);
 
 
-        String baseUrl = servletRequest.getScheme() + "://" + servletRequest.getServerName() + ":" + servletRequest.getServerPort() + "/url/";
+        String baseUrl = servletRequest.getScheme() + "://" + servletRequest.getServerName() + ":" + servletRequest.getServerPort() + "/shorten-url";
 
         return new UrlResponse(
                 urlSave.getUrlId(),

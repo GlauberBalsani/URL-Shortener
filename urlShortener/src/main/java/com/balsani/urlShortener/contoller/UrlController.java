@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/url")
 public class UrlController {
    private final UrlServices services;
 
@@ -20,7 +19,7 @@ public class UrlController {
         this.services = services;
     }
 
-    @PostMapping
+    @PostMapping(value = "/shorten-url")
     public ResponseEntity<UrlResponse> shortenUrl(@RequestBody UrlRequest request   ) {
         UrlResponse urlResponse = services.generateShortUrl(request);
         return ResponseEntity.ok(urlResponse);
