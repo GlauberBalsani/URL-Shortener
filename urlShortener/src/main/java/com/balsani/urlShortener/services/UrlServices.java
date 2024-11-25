@@ -23,7 +23,7 @@ public class UrlServices {
     }
 
     public UrlResponse generateShortUrl(UrlRequest request) {
-        String shortUrl = generator.generateShortUrl(5, 10); 
+        String shortUrl = generator.generateShortUrl(5, 10);
         Url url = new Url();
         url.setLongUrl(request.longUrl());
         url.setShortUrl(shortUrl);
